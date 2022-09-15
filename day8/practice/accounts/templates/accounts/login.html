@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  <title>로그인</title>
+{% endblock title %}
+
+{% block content %}
+  <h1>로그인</h1>
+  <hr>
+  <form action="" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="로그인">
+  </form>
+  <a href="{% url 'accounts:index' %}">뒤로가기</a>
+{% endblock content %}
